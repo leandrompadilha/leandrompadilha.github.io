@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns João</title>
+    <link rel="shortcut icon" href="/src/urna/icons/ico_palmas.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/urna.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="text-center venceu">
+            <div class="col-12 pt-5">
+                <img class="img-thumbnail rounded mt-5" src="/src/urna/images/joao.jpg" alt="joao">
+            </div>
+            <h1 class="col text-body pt-5"><i class="material-icons text-body">emoji_events</i><b class="fw-bold text-body"> João</b> venceu as eleições! <i class="material-icons text-body">emoji_events</i></h1>
+        </div>
+        <div class="container">
+            <button class="btn btn-dark active" id="voltar">Voltar</button>
+        </div>
+    </div>
+
+    <script>
+        var back = document.querySelector('#voltar')
+        back.addEventListener('click', retornar)
+
+        function retornar() {
+            window.location.href = "/urna.html"
+        }
+    </script>
+</body>
+
+</html>
