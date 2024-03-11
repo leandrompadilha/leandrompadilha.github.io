@@ -159,4 +159,7 @@ footer #redes img {
 .teste {
   height: 1080px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.carousel-inner {
+  background-color: #ffc107; /* Yellow background color from Bootstrap warning */
+}

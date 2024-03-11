@@ -255,6 +255,32 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselItems = document.querySelectorAll('.carousel-item');
+
+            carouselItems.forEach(item => {
+                const img = item.querySelector('img');
+                img.addEventListener('click', function() {
+                    toggleFullScreen(img);
+                });
+            });
+
+            function toggleFullScreen(element) {
+                if (!document.fullscreenElement) {
+                    document.body.classList.add('fullscreen'); // Adiciona classe para tela cheia
+                    element.requestFullscreen().catch(err => {
+                        console.error('Erro ao tentar entrar em modo de tela cheia:', err);
+                    });
+                } else {
+                    document.body.classList.remove('fullscreen'); // Remove classe de tela cheia
+                    document.exitFullscreen();
+                }
+            }
+        });
+    </script>
+
+
+    <script>
         (function() { // DON'T EDIT BELOW THIS LINE
             var d = document,
                 s = d.createElement('script');
